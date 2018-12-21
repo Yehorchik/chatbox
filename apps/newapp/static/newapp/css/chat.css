@@ -40,7 +40,7 @@
   height: 650px;
   width: 1115px;
   position: absolute;
-  top: 53%;
+  top: 70%;
   left: 51%;
   transform: translate(-50%,-50%);
   border-radius: 10px;
@@ -58,7 +58,7 @@
   height: 650px;
   width: 1115px;
   position: absolute;
-  top: 53%;
+  top: 70%;
   left: 51%;
   transform: translate(-50%,-50%);
   border-radius: 10px;
@@ -74,7 +74,7 @@
        height: 709px;
        width: 1149px;
        position: absolute;
-       top: 54%;
+       top: 70%;
        left: 49%;
        transform: translate(-50%,-50%);
        border-radius: 10px;
@@ -85,7 +85,7 @@
   height: 650px;
   width: 1115px;
   position: absolute;
-  top: 53%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
