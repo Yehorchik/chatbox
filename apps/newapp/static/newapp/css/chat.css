@@ -1,0 +1,724 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  .myfriends{
+    display: none;
+    background-color: white;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    width: 1115px;
+    height: 700px;
+    position: absolute;
+    top: 14%;
+    left: 12%;
+    border-radius: 30px;
+}
+.mymessages{
+  display: none;
+  background: white;
+  height: 650px;
+  width: 1115px;
+  position: absolute;
+  top: 53%;
+  left: 51%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  /* overflow-y: scroll; */
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  overflow-y: scroll;
+
+}
+
+.send_message{
+  display: none;
+  background-color: white;
+  height: 650px;
+  width: 1115px;
+  position: absolute;
+  top: 53%;
+  left: 51%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  overflow-y: scroll;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+  .your_info{
+       text-align: center;
+       display: none;
+       background-color: white;
+       height: 709px;
+       width: 1149px;
+       position: absolute;
+       top: 54%;
+       left: 49%;
+       transform: translate(-50%,-50%);
+       border-radius: 10px;
+}
+.newon{
+  background-color: white;
+  display: none;
+  height: 650px;
+  width: 1115px;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-radius: 10px;
+  /* overflow-y: scroll; */
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+.newon h1{
+  font-family: Olesia;
+}
+.newon a{
+  text-decoration: none;
+  font-family: Olesia;
+  font-size: 30px;
+}
+.newon p{
+  font-family: Ikaros;
+  font-size: 5px;
+}
+.your_info p{
+  padding: 10px;
+  margin-right: 270px;
+  font-family: Banaue;
+  font-size: 24px;
+  background: #642B73;
+  background: -webkit-linear-gradient(to right, #C6426E, #642B73);
+  background: linear-gradient(to right, #C6426E, #642B73);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+
+}
+  body{
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+  }
+header{
+    height: 105px;
+}
+img{
+    width: 100px;
+    position: relative;
+    padding: 1%;
+
+}
+h2{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 45px;
+            font-family: Anurati;
+            background: #642B73;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            -webkit-background-clip:text;
+            color: transparent;
+
+}
+/* .logout{
+    float: right;
+    vertical-align: top;
+    margin-top: 35px;
+    margin-right: 45px;
+} */
+#button {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  #button:hover {
+    background-color: #dd1818;
+    box-shadow: 0px 15px 20px rgba(229,69 ,61 , 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
+.buttons{
+  margin-left: 148px;
+  display: inline-block;
+  height: 160px;
+  width: 1150px;
+}
+.buttons input{
+  display: inline-block;
+}
+.buttons form{
+  display: inline-block;
+}
+.heyo{
+    display: block;
+    margin-left: 45px;
+    margin-top: 54px;
+    width: 100px;
+}
+
+#info {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  #info:hover {
+    background-color: #FF8C00;
+    box-shadow: 0px 15px 20px rgba(236,162 ,83 , 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
+
+  #friends {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+ #friends:hover {
+    background-color: #38ef7d;
+    box-shadow: 0px 15px 20px rgba(194,213 ,103 , 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
+  #your{
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  #your:hover {
+    background-color: #3F5EFB;
+    box-shadow: 0px 15px 20px rgba(55,30 ,203 , 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
+
+ #send {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  #send:hover {
+    background-color: #7303c0;
+    box-shadow: 0px 15px 20px rgba(79,42 ,119 , 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
+
+  #news {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  #news:hover {
+    background-color: #F2C94C;
+    box-shadow: 0px 15px 20px rgba(238,225 ,85, 0.4);
+    color: white;
+    transform: translateY(-7px);
+  }
+  .tail p{
+      text-align: center;
+      font-family: Banaue;
+  }
+
+  .date {
+        text-align: left;
+  }
+  .newon p{
+      font-size: 24px;
+  }
+.panda_img{
+    width: 544px;
+    left: -2%;
+    border-radius: 30px;
+}
+.panda_img1{
+    width:413px;
+    right: 23px;
+    border-radius: 30px;
+}
+
+.allfriends{
+  padding: 15px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 23%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  height: 530px;
+  width: 370px;
+  overflow-y:scroll;
+  padding-right: 20px;
+}
+.allfriends h4{
+  color:red ;
+  margin-bottom: -50px;
+}
+.findfriends{
+  padding: 15px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 74%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  height: 530px;
+  width: 370px;
+  overflow-y:scroll; 
+  padding-right: 20px;
+}
+::-webkit-scrollbar{
+  width: 1px;
+}
+.friend{
+  margin-top: 20px;
+  height: 82px;
+  border-bottom: 2px solid grey;
+  background: #fff;
+  text-align: left;
+}
+.friend p{
+  margin-top: 10px;
+  margin-left: 22px;
+}
+
+.message{
+  /* background-color: #642B73; */
+  width: 77%;
+  height: 30%;
+  margin-left: 130px;
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.messageto{
+    background-color:white;
+    width: 50%;
+    height: 21%;
+    margin-left: 130px;
+    margin-top: 40px;
+    text-align: left
+}
+.messageto .messagel{
+  height: 110px;
+  width: 470px;
+  border: none;
+  outline: none;
+}
+.messageto p{
+  font-family:Ikaros;
+}
+.messagel{
+  font-family:Ikaros; 
+  font-size: 20px;
+}
+.lol{
+  font-family: Banaue;
+  font-size: 24px;
+}
+.myfriends h4{
+  font-family: Ikaros;
+  font-size: 24px;
+}
+
+.friend p{
+  font-family: Ikaros;
+}
+.add{
+  position: absolute;
+  margin-top: -58px;
+  position: absolute;
+  margin-left: 30px;
+}
+
+.remove{
+  margin-left: 260px;
+  margin-top: -58px;
+}
+
+
+.no{
+  animation: wiggle 5s linear infinite;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(125,27,27),rgb(221,24,24),rgb(240,79,70));
+  color: #fff;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 20px;
+  transform-origin: 50% 5em;
+  font-family: Ikaros;
+  outline: none;
+  box-shadow: 0px 4px 15px rgba(221, 24, 24, 0.5);
+}
+
+
+.button {
+  margin-left: 242px;
+  animation: wiggle 5s linear infinite;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(113,201,240),rgb(96,162,242),rgb(42,109,176));
+  color: #fff;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 20px;
+  transform-origin: 50% 5em;
+  font-family: Ikaros;
+  outline: none;
+  box-shadow: 0px 4px 15px rgba(96, 162, 242, 0.5);
+}
+
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+   15% {
+    transform: rotateZ(-2deg);
+  }
+  20% {
+    transform: rotateZ(2deg);
+  }
+  25% {
+    transform: rotateZ(-2deg);
+  }
+  30% {
+    transform: rotateZ(2deg);
+  }
+  35% {
+    transform: rotateZ(-2deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  } 
+}
+.sent{
+  width: 60px;
+  height: 30px;
+}
+.sent{
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  font-family: Ikaros;
+  background-color: #74ebd5;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.sent:hover {
+  background-color: lightskyblue;
+  box-shadow: 0px 15px 20px rgba(98,188,243, 0.4);
+  color: white;
+
+}
+
+.yourmessage{
+  border:1px solid grey;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 30px;
+  color: #7303c0;
+}
+.who{
+  text-align: left;
+  font-family:Banaue;
+}
+.mymessages p{
+  font-family: Ikaros;
+  margin-left: 20px;
+}
+
+.delete{
+  height: 40px;
+  width: 80px;
+  margin-left: 70px;
+}
+
+.delete{
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  font-family: Ikaros;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  }
+
+.delete:hover {
+  background-color: #dd1818;
+  box-shadow: 0px 15px 20px rgba(221,75,60, 0.4);
+  color: white;
+
+}
+.back{
+  position: absolute;
+  display: inline-block;
+   margin-left: 930px;
+  margin-top: 10px;
+
+}
+
+
+
+.back2{
+  position: absolute;
+  display: inline-block;
+  margin-left: 930px;
+  margin-top: 10px;
+
+}
+
+.back3{
+  position: absolute;
+  display: inline-block;
+  margin-left: 480px;
+  margin-top: 10px;
+
+}
+.back4{
+  position: absolute;
+  display: inline-block;
+  margin-left: 930px;
+}
+.buttonback4{
+  outline: none;
+  font-family:Ikaros;
+  font-size: 16px;
+  height: 40px;
+  width: 60px;
+  border-radius: 30px;
+  transition: all 1s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+.buttonback4:hover{
+      background-image:linear-gradient(rgb(238,113,120), rgb(242,150,112), rgb(247,196,126));
+      color: white;
+      box-shadow: 0px 15px 20px rgba(242,150,112, 0.8);
+
+}
+
+.yes{
+  color: #0575E6;
+  font-family: Ikaros;
+  display: inline-block;
+  float: right;
+  margin-right: 515px;
+  margin-top: 38px;
+}
+
+.me{
+  width: 300px;
+  border:1px solid grey;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 30px;
+  outline: none;
+  font-family: Ikaros;
+  font-size: 16px;
+}
+
+#special{
+  margin-left: 395px;
+  display: block;
+}
+
+.b{
+  border: 1px solid grey;
+    height: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: Ikaros;
+    font-size: 17px;
+    height: 43px;
+    width: 60px;
+    border-radius: 30px;
+    transition: all 1s ease 0s;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    color: black;
+}
+.b:hover{
+  background-image:linear-gradient(rgb(238,113,120), rgb(242,150,112), rgb(247,196,126));
+  color: white;
+  box-shadow: 0px 15px 20px rgba(242,150,112, 0.8);
+}
+
+.update{
+  margin-top: 20px;
+  outline: none;
+  font-family:Ikaros;
+  font-size: 16px;
+  height: 40px;
+  width: 60px;
+  border-radius: 30px;
+  transition: all 1s ease 0s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+}
+
+.update:hover{
+  background-image:linear-gradient(rgb(111,236,116), rgb(79,179,167), rgb(55,125,253));
+  color: white;
+  box-shadow: 0px 15px 20px rgba(79,179,167, 0.8);
+}
+.sure{
+  display: inline-block;
+}
+
+.info{
+
+}
+
+.look{
+  display: inline-block;
+  margin-left: 261px;
+  margin-top: 29px;
+}
+
+.look1{
+  display: inline-block;
+  margin-left: 273px;
+  margin-top: -100px;
+}
+
+
+.info{
+  animation: wiggle 5s linear infinite;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-image: linear-gradient(rgb(93,204,145),rgb(77,177,169),rgb(71,164,178));
+  color: #fff;
+  font-family: Helvetica, Arial, Sans-serif;
+  font-size: 10px;
+  transform-origin: 50% 5em;
+  font-family: Ikaros;
+  outline: none;
+  box-shadow: 0px 4px 15px rgba(77, 177, 169, 0.5);
+  }
+
+.chatboxlog{
+     width: 110px;
+     height: 130px;
+}

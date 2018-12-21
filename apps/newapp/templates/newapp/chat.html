@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'newapp/css/chat.css' %}">  
+    <script src="{% static 'newapp/js/index.js' %}"></script>
+    <style>
+        .picture{
+            display: inline-block;
+        }
+        .album{
+            vertical-align: top;
+            height: 600px;
+            width: 1182px;
+            position: relative;
+            margin-top: -50px;
+            margin-left: 90px;
+        }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <img class="chatboxlog" src="{% static 'newapp/img/chatbox.png' %}" />
+        <h2 class="hey">CHAT BOX</h2>
+        {% for message in messages %}
+        <h1 class="yes">{{message}}</h1>
+        {% endfor %}
+    </header>
+
+    <div class="buttons">
+         
+        <input id ="info" class="heyo" type="submit" value="Your Info">
+        <input id ="friends" class="heyo" type="submit" value="Friends">
+        <input id ="your" class="heyo" type="submit" value="Your Messages">
+        <input id ="send" class="heyo" type="submit" value="Send Message">
+        <input id ="news" class="heyo" type="submit" value="News">
+        <form class="logout"  action="/logout" method="POST">
+            {% csrf_token %}
+            <input id="button" type="submit" class="heyo" value="Log Out">
+        </form>
+          
+    </div>
+    <div class="picture">
+            <img class="album" src="{% static 'newapp/img/color.png' %}" />
+
+    </div>
+    <div class="your_info">
+        <p>First name </p>
+        <form action="/update" method="POST">
+            {% csrf_token %}
+        <input class='me' name='first_name' type="text" placeholder='{{me.first_name}}' >
+        <p>Last name </p>
+        <input class='me' name="last_name"  type="text" placeholder = '{{me.last_name}}'>
+        <p>Email </p>
+        <input class='me' name="email"  type="text" placeholder = '{{me.email}}'>
+        <p>Birthday</p>
+        <input class='me' name="birthday"  type="date" placeholder="{{me.birthday}}">
+        <p>About</p>
+        <input class='me' name="status" id="special" type="text" placeholder="{{me.status}}">
+        <input class='update' type="submit" value="Update">
+        <a class='b' href="/back">Back</a>
+        </form>
+    </div>
+    <div class="newon"> 
+            <form class="back3" action="/back" method="POST">
+                {% csrf_token %}
+                <input class='buttonback4' type="submit" value="Back">
+            </form>
+            
+        <h1 class="date">December 21</h1>
+        <h1 class="job">How To Become A Panda Nanny, The Greatest Job Ever</h1>
+        <p>Have you heard about the best job in the world? It’s in China, being a panda caretaker at the China Giant Panda Protection and Research Center in Ya’an.
+
+                According to China Daily, those who wish to partake in this amazing opportunity 
+                 — which pays about $32,000 per year, plus meals, board and the use of an SUV — should be 22 years old or older,
+                  and have writing and photography skills as well as “some basic knowledge of pandas.”
+                
+                Here’s some knowledge for you — though, unfortunately, it’s kind of depressing: Generous estimates show fewer 
+                than 2,500 giant pandas in the wild, and the International Union for Conservation of Nature
+                 says that population is going down, partly as a result of habitat loss, and partly because of restricted 
+                 bamboo supplies. (Pandas are technically carnivores, but they eat mainly bamboo — 
+                again, problematic, since bamboo does not provide much nutrition, which is why pandas have to spend about half their day eating.)<a href="https://www.huffingtonpost.com/2014/05/23/panda-nanny_n_5379929.html">Learn More</a> </p>
+                
+        
+        <img class="panda_img" src="{% static 'newapp/img/panda.jpg' %}" />
+        <img class='panda_img1' src="{% static 'newapp/img/panda1.jpg' %}"/>
+    </div>
+
+    <div class="myfriends">
+        <div class="allfriends">
+             <p class="lol">My Friends</p>
+             {% for friend in me.friends.all %}
+             <div class="friend">
+                <p>{{friend.first_name}} {{friend.last_name}} {{friend.id}}</p>
+                <p>{{friend.email}}</p>
+                <form class='remove' action="/remove/{{friend.id}}" method="POST">
+                    {% csrf_token %}
+                <input class='no' type="submit" value="-">
+                </form>
+                <form class='look' action="/info/{{friend.id}}" method='POST'>
+                        {% csrf_token %}
+                <input class="info" type="submit" name='info' value="Info">
+                </form>
+            </div>
+             {% endfor %}
+        </div>
+        <div class="findfriends">
+             <p class="lol">Friend Suggestions</p>
+             {% for i in all %}
+                {% if i.id != request.session.userid %}
+                  {% if not i in me.friends.all %} 
+             <div class="friend">
+                 <p>{{i.first_name}} {{i.last_name}} {{i.id}}</p>
+                 <p>{{i.email}}</p>
+                 <form class='add' action="/addfriend/{{i.id}}" method="POST">
+                  {% csrf_token %}
+                 <input class="button" type="submit" value='+'>
+                 </form>
+                 <form class='look1' action="/info/{{i.id}}" method='POST'>
+                        {% csrf_token %}
+                <input class="info" type="submit" name='info' value="Info">
+                </form>
+             </div>
+                   {% endif %}
+                 {% endif %}
+             {% endfor %}
+        </div>
+        <form class='back' action="/back" method="POST">
+            {% csrf_token %}
+            <input class="buttonback4" type="submit" value="Back">
+            </form>
+    </div>
+    <div class="mymessages">
+            <form class='back4' action="/back" method="POST">
+                {% csrf_token %}
+                <input class="buttonback4" type="submit" value="Back">
+                </form>
+        <p>{{request.session.fname}} here is your message list</p>
+        {% for message in mymessage %}
+            {% if message.sent_to.id == request.session.userid %}
+                <form class="shit" action="message/{{message.id}}/delete" method="POST">
+                    {% csrf_token %}
+                <div class="message">
+                    <p class="who">{{message.sent_from.first_name}} sent {{message.created_at.date}}</p>
+                         <p class="yourmessage">{{message.message}} </p>
+                </div>
+                <input  class='delete' type="submit" name="button" value="Delete">
+                </form>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="send_message">
+            <form class="back4" action="/back" method="POST">
+                {% csrf_token %}
+                <input class='buttonback4' type="submit" value="Back">
+            </form>       
+        {% for friend in me.friends.all %}
+            <div class="messageto">
+                 <p>Send message to {{friend.first_name}} {{friend.last_name}}</p>
+                <form action="friend/{{friend.id}}/send" method="POST">
+                {% csrf_token %}
+                <input  class='messagel' type="text" name="message" placeholder="Type The message here">
+                <input class= 'sent' type="submit" value="Sent">
+                </form>
+            </div>
+         {% endfor %} 
+    </div>
+    <!-- <div class="tail">
+        <p>© Chat Box. Made By Yehor Melnyk & Sasha Golovin</p>
+
+    </div>  -->
+
+   
+</body>
+</html>

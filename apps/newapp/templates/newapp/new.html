@@ -1,0 +1,12 @@
+<div class="friend">
+        <p>{{me.first_name}} {{me.last_name}} {{me.id}}</p>
+        <p>{{me.email}}</p>
+        <form class='remove' action="/remove/{{me.id}}" method="POST">
+         {% csrf_token %}
+        <input class="no" type="submit" value='-'>
+        </form>
+        <form class='look' action="/info/{{me.id}}" method='POST'>
+                        {% csrf_token %}
+                <input class="info" type="submit" name='info' value="Info">
+        </form>
+</div>

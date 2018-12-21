@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'newapp/css/info.css' %}">  
+</head>
+<body>
+    <div class="info">
+        <p>We found this User, we can not promise that the
+            information we are showing is true=) First Name: {{user.first_name}} , 
+            Last Name: {{user.last_name}} 
+        ,Email: {{user.email}}, Birthday: {{user.birthday.date}} and of course what he wrote about him(her)self: {{user.status}}.  </p>
+        <a class="home" href="/main">Home</a>
+
+        
+    </div>
+</body>
+</html>

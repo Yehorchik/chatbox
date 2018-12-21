@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Log In ChatBox</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'newapp/css/login.css' %}"> 
+    <script src="{% static 'newapp/js/index.js' %}"></script> 
+    <style>
+        .flash{
+            font-size: 20px;
+            color: tomato;
+            font-family: Ikaros;
+        }
+    </style>
+</head>
+<body>
+    <form action="/chat" method="POST">
+    {% csrf_token %}
+    <div class='login'>
+        <h1>Log In Here</h1>
+        {% for message in messages %}
+        {% if 'email' in message.tags %}
+        <p  class="flash">{{ message }}</p>
+                    {% endif %}
+          {% endfor %}
+          {% for message in messages %}
+        {% if 'password' in message.tags %}
+        <p  class="flash">{{ message }}</p>
+                    {% endif %}
+          {% endfor %}
+        <input  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email"  placeholder="Email">
+        <input  type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="password" placeholder="Password">
+        <input class='btn' type="submit" name="submit" value="Log In">
+    </div>
+    </form>
+    
+</body>
+</html>

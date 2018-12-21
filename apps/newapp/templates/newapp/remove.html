@@ -1,0 +1,12 @@
+<div class="friend">
+        <p>{{i.first_name}} {{i.last_name}} {{i.id}}</p>
+        <p>{{i.email}}</p>
+        <form class='add' action="/addfriend/{{i.id}}" method="POST">
+            {% csrf_token %}
+        <input class='button' type="submit" value="+">
+        </form>
+        <form class='look1' action="/info/{{i.id}}" method='POST'>
+                {% csrf_token %}
+        <input class="info" type="submit" name='info' value="Info">
+        </form>
+</div>

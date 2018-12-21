@@ -1,0 +1,19 @@
+<div class="mymessages">
+    <form class='back4' action="/back" method="POST">
+        {% csrf_token %}
+        <input class="buttonback4" type="submit" value="Back">
+        </form>
+<p>{{request.session.fname}} you have {{messagecount}} messages in your message list</p>
+{% for message in mymessage %}
+    {% if message.sent_to.id == request.session.userid %}
+        <form class="shit" action="message/{{message.id}}/delete" method="POST">
+            {% csrf_token %}
+        <div class="message">
+            <p class="who">{{message.sent_from.first_name}} sent {{message.created_at.date}}</p>
+                 <p class="yourmessage">{{message.message}} </p>
+        </div>
+        <input  class='delete' type="submit" name="button" value="Delete">
+        </form>
+    {% endif %}
+{% endfor %}
+</div>

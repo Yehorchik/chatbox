@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'newapp/css/welcome.css' %}">  
+    <style>
+        .hi{
+            color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        {% for message in messages %}
+        <p class="hi">{{message}}</p>
+        {% endfor %}
+        <h1>Welcome to Chatbox {{request.session.fname}}</h1>
+        <form action="/main" method="POST">
+            {% csrf_token %}
+        <input type="submit" class="button" value="Start Chatting">
+        </form>
+    </div>
+</body>
+</html>

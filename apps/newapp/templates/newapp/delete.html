@@ -1,0 +1,8 @@
+<form action="message/{{message.id}}/delete" method="POST">
+    {% csrf_token %}
+<div class="message">
+    <p class="who">{{donesent_from.first_name}} sent {{done.created_at.date}}</p>
+         <p class="yourmessage">{{done.message}} </p>
+</div>
+<input  class='delete' type="submit" name="button" value="Delete">
+</form>
